@@ -18,29 +18,6 @@ const fadeInUp: Variants = {
 const FormationEquipesPage = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-20">
-            <div className="logo">
-              <Link href="/" className="text-gray-900 font-bold text-2xl">Wedid</Link>
-            </div>
-            <div className="hidden lg:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Accueil</Link>
-              <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Services</Link>
-              <Link href="/services/consulting-formation" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Consulting</Link>
-              <span className="text-gray-900 font-semibold">Formation Équipes</span>
-            </div>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-brand text-gray-900 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              Bilan Compétences
-            </motion.button>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
@@ -615,40 +592,6 @@ const FormationEquipesPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <h4 className="text-brand mb-6 text-2xl font-bold">Wedid</h4>
-              <p className="text-lg leading-relaxed text-gray-300 mb-6 max-w-md">
-                Experts Formation Marketing au Luxembourg. 
-                Compétences développées, équipes performantes.
-              </p>
-            </div>
-            <div>
-              <h5 className="text-white mb-4 font-bold">Formation Équipes</h5>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-brand transition-colors">Formation Groupe</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Coaching Individuel</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Workshops Pratiques</a></li>
-                <li><Link href="/services/consulting-formation" className="hover:text-brand transition-colors">Consulting</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white mb-4 font-bold">Contact</h5>
-              <ul className="space-y-2 text-gray-300">
-                <li>📍 Luxembourg-Ville</li>
-                <li>📞 +352 12 34 56 789</li>
-                <li>✉️ contact@wedid.lu</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Wedid. Tous droits réservés. | Formation Équipes Luxembourg</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

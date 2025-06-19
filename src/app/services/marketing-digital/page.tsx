@@ -145,30 +145,6 @@ const staggerChildren: Variants = {
 const MarketingDigitalPage = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-20">
-            <div className="logo">
-              <Link href="/" className="text-gray-900 font-bold text-2xl">Wedid</Link>
-            </div>
-            <div className="hidden lg:flex space-x-10">
-              <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Accueil</Link>
-              <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Services</Link>
-              <Link href="/services/marketing-digital" className="text-gray-900 font-semibold">Marketing Digital</Link>
-              <a href="#contact" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Contact</a>
-            </div>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-brand text-gray-900 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              Audit Gratuit
-            </motion.button>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
         <div 
@@ -611,46 +587,6 @@ const MarketingDigitalPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <h4 className="text-brand mb-6 text-2xl font-bold">Wedid</h4>
-              <p className="text-lg leading-relaxed text-gray-300 mb-6 max-w-md">
-                L'agence marketing digital de référence au Luxembourg. 
-                Expertise locale, résultats internationaux.
-              </p>
-              <div className="space-y-2">
-                <p className="flex items-center text-gray-300"><span className="mr-2">📍</span> Luxembourg-Ville</p>
-                <p className="flex items-center text-gray-300"><span className="mr-2">📞</span> +352 12 34 56 789</p>
-                <p className="flex items-center text-gray-300"><span className="mr-2">✉️</span> contact@wedid.lu</p>
-              </div>
-            </div>
-            <div>
-              <h5 className="text-white mb-4 font-bold">Marketing Digital</h5>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="/services/marketing-digital/seo-sea" className="hover:text-brand transition-colors">SEO & SEA</Link></li>
-                <li><Link href="/services/marketing-digital/social-media" className="hover:text-brand transition-colors">Social Media</Link></li>
-                <li><Link href="/services/marketing-digital/content-marketing" className="hover:text-brand transition-colors">Content Marketing</Link></li>
-                <li><Link href="/services" className="hover:text-brand transition-colors">Tous nos services</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white mb-4 font-bold">Ressources</h5>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-brand transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Cas clients</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Guides SEO</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Wedid. Tous droits réservés. | Agence Marketing Digital Luxembourg</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
