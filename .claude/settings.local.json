@@ -22,7 +22,8 @@
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(ls:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(npx vercel:*)"
     ],
     "deny": []
   }
