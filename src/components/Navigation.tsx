@@ -51,6 +51,27 @@ const navigationData = {
         ]
       },
     ]
+  },
+  about: {
+    title: 'À Propos',
+    href: '/about',
+    submenu: [
+      {
+        title: 'Notre Histoire',
+        href: '/about',
+        description: 'Mission, vision et valeurs de Wedid'
+      },
+      {
+        title: 'Notre Équipe',
+        href: '/about/team',
+        description: 'Les experts qui donnent vie à vos projets'
+      },
+      {
+        title: 'Certifications',
+        href: '/about/certifications',
+        description: 'Nos accréditations et partenariats'
+      }
+    ]
   }
 };
 
@@ -79,16 +100,27 @@ const submenuVariants: Variants = {
 
 const Navigation: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleServicesEnter = () => {
     setIsServicesOpen(true);
+    setIsAboutOpen(false);
   };
 
   const handleServicesLeave = () => {
     setIsServicesOpen(false);
     setHoveredService(null);
+  };
+
+  const handleAboutEnter = () => {
+    setIsAboutOpen(true);
+    setIsServicesOpen(false);
+  };
+
+  const handleAboutLeave = () => {
+    setIsAboutOpen(false);
   };
 
   const handleServiceItemEnter = (serviceTitle: string) => {
@@ -193,9 +225,55 @@ const Navigation: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            <Link href="/a-propos" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-              À Propos
-            </Link>
+            {/* About Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleAboutEnter}
+              onMouseLeave={handleAboutLeave}
+            >
+              <Link 
+                href="/about" 
+                className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center"
+              >
+                À Propos
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {/* About Dropdown Menu */}
+              <AnimatePresence>
+                {isAboutOpen && (
+                  <motion.div
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="absolute left-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg"
+                    style={{ left: '-100px' }}
+                  >
+                    <div className="p-4">
+                      <div className="space-y-2">
+                        {navigationData.about.submenu.map((item, index) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          >
+                            <h3 className="font-medium text-gray-900 mb-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-sm text-gray-600">
+                              {item.description}
+                            </p>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <Link href="/projets" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
               Projets
             </Link>
@@ -276,13 +354,21 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
 
-                <Link
-                  href="/a-propos"
-                  className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  À Propos
-                </Link>
+                <div className="px-4">
+                  <div className="text-gray-900 font-medium mb-2">À Propos</div>
+                  <div className="ml-4 space-y-2">
+                    {navigationData.about.submenu.map((item) => (
+                      <Link
+                        key={item.title}
+                        href={item.href}
+                        className="block py-1 text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
                 <Link
                   href="/projets"
                   className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
