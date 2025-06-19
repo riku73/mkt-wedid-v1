@@ -239,7 +239,7 @@ const RestaurantCaseStudy = () => {
         />
         <div className="absolute inset-0 bg-gray-900/70"></div>
         
-        <div className="max-w-6xl mx-auto px-6 relative z-10 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
           <motion.div
             initial="hidden"
             animate="visible"

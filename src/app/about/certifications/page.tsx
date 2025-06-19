@@ -211,7 +211,7 @@ const CertificationsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 overflow-hidden">
+      <section className="relative pt-20 pb-20 px-4 sm:pt-24 sm:pb-24 sm:px-6 lg:pt-32 lg:pb-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -220,7 +220,7 @@ const CertificationsPage = () => {
         />
         <div className="absolute inset-0 bg-gray-900/70"></div>
         
-        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
           <motion.div
             initial="hidden"
             animate="visible"
