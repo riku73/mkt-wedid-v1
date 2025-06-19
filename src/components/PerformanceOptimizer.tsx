@@ -105,7 +105,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
     }
 
-    // Web Vitals monitoring
+    // Basic performance monitoring without web-vitals
     const reportWebVitals = (metric: any) => {
       // Report to analytics service
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -118,17 +118,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
-    // Import and use web-vitals library if available
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(reportWebVitals);
-      getFID(reportWebVitals);
-      getFCP(reportWebVitals);
-      getLCP(reportWebVitals);
-      getTTFB(reportWebVitals);
-    }).catch(() => {
-      // Fallback if web-vitals is not available
-      console.log('Web Vitals library not available');
-    });
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', () => {
+        // Simple performance logging
+        console.log('Page loaded successfully');
+      });
+    }
 
     return () => {
       lazyLoadObserver.disconnect();

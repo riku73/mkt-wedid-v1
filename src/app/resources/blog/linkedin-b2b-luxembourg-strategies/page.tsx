@@ -265,7 +265,7 @@ const LinkedInB2BLuxembourgBlogPost = () => {
                 <div>
                   <h4 className="font-bold text-gray-900 mb-3">Métriques d'Engagement</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Taux d'engagement posts (>3%)</li>
+                    <li>• Taux d'engagement posts (&gt;3%)</li>
                     <li>• Croissance followers qualifiés</li>
                     <li>• Partages et commentaires</li>
                     <li>• Clics vers site web</li>

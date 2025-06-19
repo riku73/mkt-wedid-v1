@@ -14,6 +14,7 @@ interface InputFieldProps extends BaseFieldProps, Omit<InputHTMLAttributes<HTMLI
 interface TextareaFieldProps extends BaseFieldProps, Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'name'> {}
 interface SelectFieldProps extends BaseFieldProps, Omit<SelectHTMLAttributes<HTMLSelectElement>, 'name'> {
   options: { value: string; label: string; }[];
+  placeholder?: string;
 }
 
 interface CheckboxOption {

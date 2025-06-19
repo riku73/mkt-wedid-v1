@@ -23,7 +23,8 @@
       "Bash(grep:*)",
       "Bash(ls:*)",
       "Bash(pkill:*)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(vercel logs:*)"
     ],
     "deny": []
   }
