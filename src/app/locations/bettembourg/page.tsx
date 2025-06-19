@@ -197,7 +197,7 @@ const BettembourgPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative overflow-hidden pt-32 pb-24">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{

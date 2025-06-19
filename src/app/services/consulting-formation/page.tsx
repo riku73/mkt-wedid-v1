@@ -30,7 +30,7 @@ const ConsultingFormationPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20 pb-16 md:pb-20">
+      <section className="relative overflow-hidden pt-32 pb-24">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
