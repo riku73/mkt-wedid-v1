@@ -24,7 +24,10 @@
       "Bash(ls:*)",
       "Bash(pkill:*)",
       "Bash(npx vercel:*)",
-      "Bash(vercel logs:*)"
+      "Bash(vercel logs:*)",
+      "Bash(gh repo view:*)",
+      "Bash(npm run lint)",
+      "Bash(npx tsc:*)"
     ],
     "deny": []
   }
