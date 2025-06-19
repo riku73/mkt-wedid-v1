@@ -218,7 +218,7 @@ const WedidHomepage: React.FC = () => {
     <div className="min-h-screen bg-white font-sans">{/* Navigation now handled by layout */}
 
       {/* Hero Section */}
-      <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="accueil" className="relative pt-28 pb-20 px-4 sm:pt-32 sm:pb-24 sm:px-6 lg:pt-32 lg:pb-32 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -232,7 +232,7 @@ const WedidHomepage: React.FC = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         
         {/* Content */}
-        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
           <motion.div
             initial="hidden"
             animate="visible"
