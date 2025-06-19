@@ -274,8 +274,8 @@ const Navigation: React.FC = () => {
                 )}
               </AnimatePresence>
             </div>
-            <Link href="/projets" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-              Projets
+            <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+              Portfolio
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
               Contact
@@ -370,11 +370,11 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
                 <Link
-                  href="/projets"
+                  href="/portfolio"
                   className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Projets
+                  Portfolio
                 </Link>
                 <Link
                   href="/contact"
