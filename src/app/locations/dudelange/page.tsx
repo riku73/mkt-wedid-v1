@@ -174,7 +174,7 @@ const DudelangePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1486755019813-b4c3035b33c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/75"></div>
@@ -587,7 +587,7 @@ const DudelangePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2415&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/85"></div>

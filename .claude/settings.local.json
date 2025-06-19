@@ -27,7 +27,8 @@
       "Bash(vercel logs:*)",
       "Bash(gh repo view:*)",
       "Bash(npm run lint)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "WebFetch(domain:images.unsplash.com)"
     ],
     "deny": []
   }

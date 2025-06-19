@@ -146,7 +146,7 @@ const LuxembourgVillePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1573991406404-3e1b9c8b1c54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/75"></div>
@@ -477,7 +477,7 @@ const LuxembourgVillePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1605379399843-5870eea9b74e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/85"></div>

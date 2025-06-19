@@ -29,7 +29,7 @@ const locationData: LocationData[] = [
     businessFocus: ['Services financiers', 'Sièges sociaux européens', 'Institutions gouvernementales', 'Tech & Fintech'],
     demographics: 'Centre d\'affaires international avec forte concentration d\'entreprises multinationales',
     keyIndustries: ['Finance', 'Banking', 'Insurance', 'Government', 'EU Institutions', 'Corporate HQ'],
-    image: 'https://images.unsplash.com/photo-1573991406404-3e1b9c8b1c54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     href: '/locations/luxembourg-ville',
     stats: {
       businesses: '15,000+',
@@ -77,7 +77,7 @@ const locationData: LocationData[] = [
     businessFocus: ['Industrie 4.0', 'PME familiales', 'Services B2B', 'Reconversion industrielle'],
     demographics: 'Ville industrielle en transformation avec focus sur l\'innovation et la durabilité',
     keyIndustries: ['Manufacturing', 'Industry 4.0', 'B2B Services', 'Sustainability', 'Family Business', 'Innovation'],
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     href: '/locations/differdange',
     stats: {
       businesses: '1,200+',
@@ -93,7 +93,7 @@ const locationData: LocationData[] = [
     businessFocus: ['Industrie diversifiée', 'Commerce de proximité', 'Services municipaux', 'PME locales'],
     demographics: 'Ville dynamique avec équilibre entre résidentiel et commercial, forte identité locale',
     keyIndustries: ['Diversified Industry', 'Local Commerce', 'Municipal Services', 'SMEs', 'Community Business', 'Regional Hub'],
-    image: 'https://images.unsplash.com/photo-1486755019813-b4c3035b33c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
     href: '/locations/dudelange',
     stats: {
       businesses: '900+',
@@ -125,7 +125,7 @@ const locationData: LocationData[] = [
     businessFocus: ['Industrie lourde', 'Logistique', 'Distribution', 'Services industriels'],
     demographics: 'Centre industriel avec infrastructure logistique développée et opportunités B2B',
     keyIndustries: ['Heavy Industry', 'Logistics', 'Distribution', 'Industrial Services', 'Manufacturing', 'Supply Chain'],
-    image: 'https://images.unsplash.com/photo-1553355616-6884e9aef8f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     href: '/locations/sanem',
     stats: {
       businesses: '650+',

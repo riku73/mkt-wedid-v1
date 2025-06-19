@@ -174,7 +174,7 @@ const SanemPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1553355616-6884e9aef8f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/75"></div>
@@ -595,7 +595,7 @@ const SanemPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/85"></div>

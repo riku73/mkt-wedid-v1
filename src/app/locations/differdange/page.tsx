@@ -174,7 +174,7 @@ const DifferdangePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1518709268805-4e9042af2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/75"></div>
@@ -587,7 +587,7 @@ const DifferdangePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1565022194996-75dc22165b75?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
           }}
         />
         <div className="absolute inset-0 bg-gray-900/85"></div>
