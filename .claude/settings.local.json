@@ -17,7 +17,8 @@
       "Bash(rm:*)",
       "Bash(git config:*)",
       "Bash(git checkout:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": []
   }

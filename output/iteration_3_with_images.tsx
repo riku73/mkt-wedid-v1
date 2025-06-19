@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import { useRef } from 'react';
 
 // TypeScript interfaces
@@ -137,19 +137,19 @@ const processSteps: ProcessStep[] = [
 ];
 
 // Enhanced animation variants
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 60 },
   visible: { 
     opacity: 1, 
     y: 0, 
     transition: { 
       duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     } 
   }
 };
 
-const staggerChildren = {
+const staggerChildren: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -160,13 +160,13 @@ const staggerChildren = {
   }
 };
 
-const scaleOnHover = {
+const scaleOnHover: Variants = {
   rest: { scale: 1 },
   hover: { 
     scale: 1.05,
     transition: { 
       duration: 0.3,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
