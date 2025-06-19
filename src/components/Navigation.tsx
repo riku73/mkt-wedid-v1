@@ -240,7 +240,7 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="logo">
             <Link href="/" className="text-gray-900 font-bold text-2xl hover:text-brand transition-colors">
-              Wedid v2
+              Wedid
             </Link>
           </div>
 
@@ -289,7 +289,7 @@ const Navigation: React.FC = () => {
                               href={service.href}
                               className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                             >
-                              <h3 className="font-medium text-gray-900 mb-1">
+                              <h3 className="text-xs text-gray-900 mb-1">
                                 {service.title}
                               </h3>
                               <p className="text-sm text-gray-600 mb-3">
@@ -366,7 +366,7 @@ const Navigation: React.FC = () => {
                             href={item.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="font-medium text-gray-900 mb-1">
+                            <h3 className="text-xs text-gray-900 mb-1">
                               {item.title}
                             </h3>
                             <p className="text-sm text-gray-600">
@@ -419,7 +419,7 @@ const Navigation: React.FC = () => {
                             href={item.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="font-medium text-gray-900 mb-1">
+                            <h3 className="text-xs text-gray-900 mb-1">
                               {item.title}
                             </h3>
                             <p className="text-sm text-gray-600">
