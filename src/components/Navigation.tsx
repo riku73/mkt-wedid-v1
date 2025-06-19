@@ -72,6 +72,99 @@ const navigationData = {
         description: 'Nos accréditations et partenariats'
       }
     ]
+  },
+  resources: {
+    title: 'Ressources',
+    href: '/resources',
+    submenu: [
+      {
+        title: 'Blog Marketing',
+        href: '/resources/blog',
+        description: 'Articles et insights Luxembourg'
+      },
+      {
+        title: 'Guides & Whitepapers',
+        href: '/resources/guides',
+        description: 'Ressources téléchargeables gratuites'
+      },
+      {
+        title: 'Outils Gratuits',
+        href: '/resources/tools',
+        description: 'Calculateurs et audits'
+      },
+      {
+        title: 'FAQ',
+        href: '/resources/faq',
+        description: 'Questions fréquentes'
+      }
+    ]
+  },
+  locations: {
+    title: 'Zones d\'Intervention',
+    href: '/locations',
+    submenu: [
+      {
+        title: 'Luxembourg-Ville',
+        href: '/locations/luxembourg-ville',
+        description: 'Centre financier européen'
+      },
+      {
+        title: 'Kirchberg',
+        href: '/locations/kirchberg',
+        description: 'Hub tech & innovation'
+      },
+      {
+        title: 'Esch-sur-Alzette',
+        href: '/locations/esch-sur-alzette',
+        description: 'Ville en transformation'
+      },
+      {
+        title: 'Differdange',
+        href: '/locations/differdange',
+        description: 'Centre industriel'
+      },
+      {
+        title: 'Dudelange',
+        href: '/locations/dudelange',
+        description: 'Hub régional dynamique'
+      },
+      {
+        title: 'Pétange',
+        href: '/locations/petange',
+        description: 'Porte internationale'
+      },
+      {
+        title: 'Sanem',
+        href: '/locations/sanem',
+        description: 'Pôle industriel'
+      },
+      {
+        title: 'Bettembourg',
+        href: '/locations/bettembourg',
+        description: 'Hub logistique européen'
+      }
+    ]
+  },
+  contact: {
+    title: 'Contact',
+    href: '/contact',
+    submenu: [
+      {
+        title: 'Contact',
+        href: '/contact',
+        description: 'Formulaire de contact général'
+      },
+      {
+        title: 'Consultation Gratuite',
+        href: '/consultation-gratuite',
+        description: 'Réserver votre consultation de 45 minutes'
+      },
+      {
+        title: 'Demander un Devis',
+        href: '/devis',
+        description: 'Formulaire détaillé pour votre projet'
+      }
+    ]
   }
 };
 
@@ -101,12 +194,18 @@ const submenuVariants: Variants = {
 const Navigation: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isLocationsOpen, setIsLocationsOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleServicesEnter = () => {
     setIsServicesOpen(true);
     setIsAboutOpen(false);
+    setIsResourcesOpen(false);
+    setIsLocationsOpen(false);
+    setIsContactOpen(false);
   };
 
   const handleServicesLeave = () => {
@@ -117,10 +216,49 @@ const Navigation: React.FC = () => {
   const handleAboutEnter = () => {
     setIsAboutOpen(true);
     setIsServicesOpen(false);
+    setIsResourcesOpen(false);
+    setIsLocationsOpen(false);
+    setIsContactOpen(false);
   };
 
   const handleAboutLeave = () => {
     setIsAboutOpen(false);
+  };
+
+  const handleResourcesEnter = () => {
+    setIsResourcesOpen(true);
+    setIsServicesOpen(false);
+    setIsAboutOpen(false);
+    setIsLocationsOpen(false);
+    setIsContactOpen(false);
+  };
+
+  const handleResourcesLeave = () => {
+    setIsResourcesOpen(false);
+  };
+
+  const handleLocationsEnter = () => {
+    setIsLocationsOpen(true);
+    setIsServicesOpen(false);
+    setIsAboutOpen(false);
+    setIsResourcesOpen(false);
+    setIsContactOpen(false);
+  };
+
+  const handleLocationsLeave = () => {
+    setIsLocationsOpen(false);
+  };
+
+  const handleContactEnter = () => {
+    setIsContactOpen(true);
+    setIsServicesOpen(false);
+    setIsAboutOpen(false);
+    setIsResourcesOpen(false);
+    setIsLocationsOpen(false);
+  };
+
+  const handleContactLeave = () => {
+    setIsContactOpen(false);
   };
 
   const handleServiceItemEnter = (serviceTitle: string) => {
@@ -277,15 +415,162 @@ const Navigation: React.FC = () => {
             <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
               Portfolio
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-              Contact
-            </Link>
+            
+            {/* Resources Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleResourcesEnter}
+              onMouseLeave={handleResourcesLeave}
+            >
+              <Link 
+                href="/resources" 
+                className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center"
+              >
+                Ressources
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {/* Resources Dropdown Menu */}
+              <AnimatePresence>
+                {isResourcesOpen && (
+                  <motion.div
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="absolute left-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg"
+                    style={{ left: '-100px' }}
+                  >
+                    <div className="p-4">
+                      <div className="space-y-2">
+                        {navigationData.resources.submenu.map((item, index) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          >
+                            <h3 className="font-medium text-gray-900 mb-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-sm text-gray-600">
+                              {item.description}
+                            </p>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            
+            {/* Locations Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleLocationsEnter}
+              onMouseLeave={handleLocationsLeave}
+            >
+              <Link 
+                href="/locations" 
+                className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center"
+              >
+                Zones d'Intervention
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {/* Locations Dropdown Menu */}
+              <AnimatePresence>
+                {isLocationsOpen && (
+                  <motion.div
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="absolute left-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg"
+                    style={{ left: '-100px' }}
+                  >
+                    <div className="p-4">
+                      <div className="space-y-2">
+                        {navigationData.locations.submenu.map((location, index) => (
+                          <Link
+                            key={location.title}
+                            href={location.href}
+                            className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          >
+                            <h3 className="font-medium text-gray-900 mb-1">
+                              {location.title}
+                            </h3>
+                            <p className="text-sm text-gray-600">
+                              {location.description}
+                            </p>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            
+            {/* Contact Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleContactEnter}
+              onMouseLeave={handleContactLeave}
+            >
+              <Link 
+                href="/contact" 
+                className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center"
+              >
+                Contact
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {/* Contact Dropdown Menu */}
+              <AnimatePresence>
+                {isContactOpen && (
+                  <motion.div
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="absolute left-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg"
+                    style={{ left: '-100px' }}
+                  >
+                    <div className="p-4">
+                      <div className="space-y-2">
+                        {navigationData.contact.submenu.map((item, index) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          >
+                            <h3 className="font-medium text-gray-900 mb-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-sm text-gray-600">
+                              {item.description}
+                            </p>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
             <Link
-              href="/consultation"
+              href="/consultation-gratuite"
               className="hidden lg:inline-flex items-center bg-brand text-gray-900 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg hover:bg-brand/90 transition-all duration-300"
             >
               Consultation Gratuite
@@ -376,17 +661,58 @@ const Navigation: React.FC = () => {
                 >
                   Portfolio
                 </Link>
-                <Link
-                  href="/contact"
-                  className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Contact
-                </Link>
+                
+                <div className="px-4">
+                  <div className="text-gray-900 font-medium mb-2">Ressources</div>
+                  <div className="ml-4 space-y-2">
+                    {navigationData.resources.submenu.map((item) => (
+                      <Link
+                        key={item.title}
+                        href={item.href}
+                        className="block py-1 text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="px-4">
+                  <div className="text-gray-900 font-medium mb-2">Zones d'Intervention</div>
+                  <div className="ml-4 space-y-2">
+                    {navigationData.locations.submenu.map((location) => (
+                      <Link
+                        key={location.title}
+                        href={location.href}
+                        className="block py-1 text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {location.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="px-4">
+                  <div className="text-gray-900 font-medium mb-2">Contact</div>
+                  <div className="ml-4 space-y-2">
+                    {navigationData.contact.submenu.map((item) => (
+                      <Link
+                        key={item.title}
+                        href={item.href}
+                        className="block py-1 text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
                 
                 <div className="px-4 pt-4">
                   <Link
-                    href="/consultation"
+                    href="/consultation-gratuite"
                     className="block w-full text-center bg-brand text-gray-900 px-6 py-3 rounded-lg font-semibold"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
