@@ -215,30 +215,7 @@ const WedidHomepage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white font-sans">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-20">
-            <div className="logo">
-              <h3 className="text-gray-900 font-bold text-2xl">Wedid</h3>
-            </div>
-            <div className="hidden lg:flex space-x-10">
-              <a href="#accueil" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Accueil</a>
-              <a href="#services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Services</a>
-              <a href="#a-propos" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">À Propos</a>
-              <a href="#contact" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Contact</a>
-            </div>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-brand text-gray-900 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              Consultation Gratuite
-            </motion.button>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-white font-sans">{/* Navigation now handled by layout */}
 
       {/* Hero Section */}
       <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -628,46 +605,7 @@ const WedidHomepage: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <h4 className="text-brand mb-6 text-2xl font-bold">Wedid</h4>
-              <p className="text-lg leading-relaxed text-gray-300 mb-6 max-w-md">
-                L'agence marketing digital de référence au Luxembourg. 
-                Expertise locale, résultats internationaux.
-              </p>
-              <div className="space-y-2">
-                <p className="flex items-center text-gray-300"><span className="mr-2">📍</span> Luxembourg-Ville</p>
-                <p className="flex items-center text-gray-300"><span className="mr-2">📞</span> +352 12 34 56 789</p>
-                <p className="flex items-center text-gray-300"><span className="mr-2">✉️</span> contact@wedid.lu</p>
-              </div>
-            </div>
-            <div>
-              <h5 className="text-white mb-4 font-bold">Services</h5>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-brand transition-colors">Marketing Digital</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Création Sites Web</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Branding & Design</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Consulting</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white mb-4 font-bold">Entreprise</h5>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-brand transition-colors">À Propos</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Équipe</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Projets</a></li>
-                <li><a href="#" className="hover:text-brand transition-colors">Blog</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Wedid. Tous droits réservés. | Agence Marketing Digital Luxembourg</p>
-          </div>
-        </div>
-      </footer>
+      {/* Footer now handled by layout */}
     </div>
   );
 };
