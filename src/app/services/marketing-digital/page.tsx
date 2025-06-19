@@ -146,7 +146,7 @@ const MarketingDigitalPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-20 px-4 sm:pt-24 sm:pb-24 sm:px-6 lg:pt-32 lg:pb-32 overflow-hidden">
+      <section className="relative pt-28 pb-20 px-4 sm:pt-32 sm:pb-24 sm:px-6 lg:pt-32 lg:pb-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
