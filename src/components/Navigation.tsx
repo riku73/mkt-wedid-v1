@@ -240,7 +240,7 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="logo">
             <Link href="/" className="text-gray-900 font-bold text-2xl hover:text-brand transition-colors">
-              Wedid
+              Wedid v2
             </Link>
           </div>
 
