@@ -142,7 +142,7 @@ const LuxembourgVillePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-32 pb-24">
+      <section className="relative h-screen min-h-[600px] max-h-[800px] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
