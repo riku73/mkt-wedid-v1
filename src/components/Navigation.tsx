@@ -289,9 +289,9 @@ const Navigation: React.FC = () => {
                               href={service.href}
                               className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                             >
-                              <h3 className="text-sm font-medium text-gray-900 mb-1">
+                              <div className="font-bold text-gray-900 mb-1">
                                 {service.title}
-                              </h3>
+                              </div>
                               <p className="text-sm text-gray-600 mb-3">
                                 {service.description}
                               </p>
@@ -366,9 +366,9 @@ const Navigation: React.FC = () => {
                             href={item.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="text-sm font-medium text-gray-900 mb-1">
+                            <div className="font-bold text-gray-900 mb-1">
                               {item.title}
-                            </h3>
+                            </div>
                             <p className="text-sm text-gray-600">
                               {item.description}
                             </p>
@@ -419,9 +419,9 @@ const Navigation: React.FC = () => {
                             href={item.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="text-sm font-medium text-gray-900 mb-1">
+                            <div className="font-bold text-gray-900 mb-1">
                               {item.title}
-                            </h3>
+                            </div>
                             <p className="text-sm text-gray-600">
                               {item.description}
                             </p>
