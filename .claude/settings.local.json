@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npx next dev:*)",
+      "Bash(timeout 10s npm run dev)",
+      "WebFetch(domain:growmark.webflow.io)",
+      "Bash(git add:*)",
+      "Bash(git init:*)",
+      "Bash(git pull:*)",
+      "Bash(rm:*)",
+      "Bash(git config:*)",
+      "Bash(git checkout:*)"
+    ],
+    "deny": []
+  }
+}
