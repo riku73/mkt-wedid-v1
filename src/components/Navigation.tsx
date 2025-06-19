@@ -194,8 +194,6 @@ const submenuVariants: Variants = {
 const Navigation: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isLocationsOpen, setIsLocationsOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -203,8 +201,6 @@ const Navigation: React.FC = () => {
   const handleServicesEnter = () => {
     setIsServicesOpen(true);
     setIsAboutOpen(false);
-    setIsResourcesOpen(false);
-    setIsLocationsOpen(false);
     setIsContactOpen(false);
   };
 
@@ -216,8 +212,6 @@ const Navigation: React.FC = () => {
   const handleAboutEnter = () => {
     setIsAboutOpen(true);
     setIsServicesOpen(false);
-    setIsResourcesOpen(false);
-    setIsLocationsOpen(false);
     setIsContactOpen(false);
   };
 
@@ -225,36 +219,10 @@ const Navigation: React.FC = () => {
     setIsAboutOpen(false);
   };
 
-  const handleResourcesEnter = () => {
-    setIsResourcesOpen(true);
-    setIsServicesOpen(false);
-    setIsAboutOpen(false);
-    setIsLocationsOpen(false);
-    setIsContactOpen(false);
-  };
-
-  const handleResourcesLeave = () => {
-    setIsResourcesOpen(false);
-  };
-
-  const handleLocationsEnter = () => {
-    setIsLocationsOpen(true);
-    setIsServicesOpen(false);
-    setIsAboutOpen(false);
-    setIsResourcesOpen(false);
-    setIsContactOpen(false);
-  };
-
-  const handleLocationsLeave = () => {
-    setIsLocationsOpen(false);
-  };
-
   const handleContactEnter = () => {
     setIsContactOpen(true);
     setIsServicesOpen(false);
     setIsAboutOpen(false);
-    setIsResourcesOpen(false);
-    setIsLocationsOpen(false);
   };
 
   const handleContactLeave = () => {
@@ -416,110 +384,6 @@ const Navigation: React.FC = () => {
               Projets
             </Link>
             
-            <Link href="/resources/blog" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-              Blog
-            </Link>
-            
-            {/* Resources Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={handleResourcesEnter}
-              onMouseLeave={handleResourcesLeave}
-            >
-              <Link 
-                href="/resources" 
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center"
-              >
-                Ressources
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </Link>
-
-              {/* Resources Dropdown Menu */}
-              <AnimatePresence>
-                {isResourcesOpen && (
-                  <motion.div
-                    variants={dropdownVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    className="absolute left-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg"
-                    style={{ left: '-100px' }}
-                  >
-                    <div className="p-4">
-                      <div className="space-y-2">
-                        {navigationData.resources.submenu.map((item, index) => (
-                          <Link
-                            key={item.title}
-                            href={item.href}
-                            className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                          >
-                            <h3 className="font-semibold text-sm text-gray-900 mb-1">
-                              {item.title}
-                            </h3>
-                            <p className="text-sm text-gray-600">
-                              {item.description}
-                            </p>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-            
-            {/* Locations Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={handleLocationsEnter}
-              onMouseLeave={handleLocationsLeave}
-            >
-              <Link 
-                href="/locations" 
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center"
-              >
-                Zones d'Intervention
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </Link>
-
-              {/* Locations Dropdown Menu */}
-              <AnimatePresence>
-                {isLocationsOpen && (
-                  <motion.div
-                    variants={dropdownVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    className="absolute left-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg"
-                    style={{ left: '-100px' }}
-                  >
-                    <div className="p-4">
-                      <div className="space-y-2">
-                        {navigationData.locations.submenu.map((location, index) => (
-                          <Link
-                            key={location.title}
-                            href={location.href}
-                            className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                          >
-                            <h3 className="font-semibold text-sm text-gray-900 mb-1">
-                              {location.title}
-                            </h3>
-                            <p className="text-sm text-gray-600">
-                              {location.description}
-                            </p>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-            
             {/* Contact Dropdown */}
             <div 
               className="relative"
@@ -665,46 +529,6 @@ const Navigation: React.FC = () => {
                 >
                   Projets
                 </Link>
-                
-                <Link
-                  href="/resources/blog"
-                  className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Blog
-                </Link>
-                
-                <div className="px-4">
-                  <div className="text-gray-900 font-medium mb-2">Ressources</div>
-                  <div className="ml-4 space-y-2">
-                    {navigationData.resources.submenu.map((item) => (
-                      <Link
-                        key={item.title}
-                        href={item.href}
-                        className="block py-1 text-gray-700 hover:text-gray-900 transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="px-4">
-                  <div className="text-gray-900 font-medium mb-2">Zones d'Intervention</div>
-                  <div className="ml-4 space-y-2">
-                    {navigationData.locations.submenu.map((location) => (
-                      <Link
-                        key={location.title}
-                        href={location.href}
-                        className="block py-1 text-gray-700 hover:text-gray-900 transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {location.title}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
                 
                 <div className="px-4">
                   <div className="text-gray-900 font-medium mb-2">Contact</div>
