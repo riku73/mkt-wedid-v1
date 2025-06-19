@@ -137,7 +137,7 @@ const CreationSitesWebPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20 pb-12">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20 pb-16 md:pb-20">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
