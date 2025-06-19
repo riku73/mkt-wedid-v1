@@ -16,7 +16,8 @@
       "Bash(git pull:*)",
       "Bash(rm:*)",
       "Bash(git config:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(rg:*)"
     ],
     "deny": []
   }
