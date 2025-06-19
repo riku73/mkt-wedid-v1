@@ -121,7 +121,7 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20 pb-12">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{

@@ -321,7 +321,7 @@ const Navigation: React.FC = () => {
                               href={service.href}
                               className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                             >
-                              <h3 className="font-medium text-sm text-gray-900 mb-1">
+                              <h3 className="font-semibold text-sm text-gray-900 mb-1">
                                 {service.title}
                               </h3>
                               <p className="text-sm text-gray-600 mb-3">
@@ -398,7 +398,7 @@ const Navigation: React.FC = () => {
                             href={item.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="font-medium text-gray-900 mb-1">
+                            <h3 className="font-semibold text-sm text-gray-900 mb-1">
                               {item.title}
                             </h3>
                             <p className="text-sm text-gray-600">
@@ -413,7 +413,11 @@ const Navigation: React.FC = () => {
               </AnimatePresence>
             </div>
             <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-              Portfolio
+              Projets
+            </Link>
+            
+            <Link href="/resources/blog" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+              Blog
             </Link>
             
             {/* Resources Dropdown */}
@@ -451,7 +455,7 @@ const Navigation: React.FC = () => {
                             href={item.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="font-medium text-gray-900 mb-1">
+                            <h3 className="font-semibold text-sm text-gray-900 mb-1">
                               {item.title}
                             </h3>
                             <p className="text-sm text-gray-600">
@@ -501,7 +505,7 @@ const Navigation: React.FC = () => {
                             href={location.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="font-medium text-gray-900 mb-1">
+                            <h3 className="font-semibold text-sm text-gray-900 mb-1">
                               {location.title}
                             </h3>
                             <p className="text-sm text-gray-600">
@@ -551,7 +555,7 @@ const Navigation: React.FC = () => {
                             href={item.href}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
-                            <h3 className="font-medium text-gray-900 mb-1">
+                            <h3 className="font-semibold text-sm text-gray-900 mb-1">
                               {item.title}
                             </h3>
                             <p className="text-sm text-gray-600">
@@ -659,7 +663,15 @@ const Navigation: React.FC = () => {
                   className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Portfolio
+                  Projets
+                </Link>
+                
+                <Link
+                  href="/resources/blog"
+                  className="block px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Blog
                 </Link>
                 
                 <div className="px-4">
